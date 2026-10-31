@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROLOC Studio download</title>
+<meta name="description" content="Download ROLOC Studio, the programming and diagnostics software for ROLOC PLCs.">
+<link rel="icon" href="icon.png">
+<style>
+:root{--black:#16181B;--yellow:#F6B800;--green:#35C46A;--dead:#3C4650;--soft:#9AA3AD;--ink:#16181B;--muted:#56626F;--line:#DCE2E8;--page:#EEF1F4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:16px/1.5 'Segoe UI',system-ui,sans-serif}
+.band{background:var(--black);color:#fff;padding:44px 16px 36px}
+.inner{max-width:648px;margin:0 auto}
+.logo{display:block;width:208px;max-width:60%;height:auto}
+.tag{color:var(--soft);margin:12px 0 26px}
+.rung{display:block;width:100%;height:auto}
+.rung text{font:11px 'Segoe UI',system-ui,sans-serif;fill:var(--soft);text-anchor:middle}
+.rung text.addr{font:11px Consolas,monospace;fill:var(--yellow)}
+.wire{stroke:var(--dead);stroke-width:3;fill:none}
+.live{stroke:var(--green);stroke-width:3;fill:none;stroke-dasharray:472;stroke-dashoffset:0;animation:flow 5s linear infinite}
+.halfL,.halfR{fill:var(--yellow)}
+.c0 .halfL{animation:shutL0 5s linear infinite}.c0 .halfR{animation:shutR0 5s linear infinite}
+.c1 .halfL{animation:shutL1 5s linear infinite}.c1 .halfR{animation:shutR1 5s linear infinite}
+.c2 .halfL{animation:shutL2 5s linear infinite}.c2 .halfR{animation:shutR2 5s linear infinite}
+.coil{fill:var(--green);stroke:var(--green);stroke-width:3;animation:coil 5s linear infinite}
+.rail{stroke:var(--green);stroke-width:3}
+.rail.end{animation:rail 5s linear infinite}
+/* Power moves in steps: each contact closes, then the wire behind it comes on. */
+@keyframes flow{0%{stroke-dashoffset:472}8%{stroke-dashoffset:390}14%{stroke-dashoffset:390}22%{stroke-dashoffset:290}28%{stroke-dashoffset:290}36%{stroke-dashoffset:190}42%{stroke-dashoffset:190}50%{stroke-dashoffset:96}56%,100%{stroke-dashoffset:0}}
+@keyframes shutL0{0%,8%{transform:translateX(-8px)}14%,100%{transform:none}}
+@keyframes shutR0{0%,8%{transform:translateX(8px)}14%,100%{transform:none}}
+@keyframes shutL1{0%,22%{transform:translateX(-8px)}28%,100%{transform:none}}
+@keyframes shutR1{0%,22%{transform:translateX(8px)}28%,100%{transform:none}}
+@keyframes shutL2{0%,36%{transform:translateX(-8px)}42%,100%{transform:none}}
+@keyframes shutR2{0%,36%{transform:translateX(8px)}42%,100%{transform:none}}
+@keyframes coil{0%,49%{fill:var(--black);stroke:var(--yellow)}50%,100%{fill:var(--green);stroke:var(--green)}}
+@keyframes rail{0%,55%{stroke:var(--dead)}56%,100%{stroke:var(--green)}}
+@media (prefers-reduced-motion:reduce){.live,.halfL,.halfR,.coil,.rail.end{animation:none}}
+main{max-width:680px;margin:0 auto;padding:0 16px 40px}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px;margin-top:18px}
+.card.first{margin-top:-1px;border-radius:0 0 6px 6px}
+h1{margin:0;font-size:26px;line-height:1.25}
+h2{margin:0 0 8px;font-size:17px}
+.sub{color:var(--muted)}
+a.btn{display:block;text-align:center;background:var(--black);color:var(--yellow);text-decoration:none;font-weight:600;border-radius:4px;padding:14px;margin-top:16px}
+a.btn:hover,a.btn:focus-visible{background:#2A2E33}
+ol{margin:0;padding-left:22px}
+li+li{margin-top:6px}
+p{margin:0}
+p+p{margin-top:8px}
+a{color:#0B6E75}
+footer{color:var(--muted);font-size:14px;margin-top:22px}
+</style>
+</head>
+<body>
+<div class="band">
+  <div class="inner">
+    <svg class="logo" viewBox="0 0 520 100" role="img" aria-label="ROLOC">
+      <g fill="#F6B800">
+        <path d="M0 0H24V100H0Z"/>
+        <path fill-rule="evenodd" d="M0 0H58L82 24V42L58 66H0ZM24 22H47.5L58 32.5V33.5L47.5 44H24Z"/>
+        <path d="M20 58H52.5L94.5 100H62Z"/>
+        <path transform="translate(106 0)" d="M24 0H47V22H34.5L24 32.5V67.5L34.5 78H47V100H24L0 76V24Z M80 0H57V22H69.5L80 32.5V67.5L69.5 78H57V100H80L104 76V24Z"/>
+        <path transform="translate(226 0)" d="M0 0H24V78H72V100H0Z"/>
+        <path transform="translate(304 0)" d="M24 0H47V22H34.5L24 32.5V67.5L34.5 78H47V100H24L0 76V24Z M80 0H57V22H69.5L80 32.5V67.5L69.5 78H57V100H80L104 76V24Z"/>
+        <path transform="translate(422 0)" d="M24 0H98V22H34.5L24 32.5V67.5L34.5 78H98V100H24L0 76V24Z"/>
+      </g>
+    </svg>
+    <p class="tag">Programming and diagnostics for ROLOC PLCs</p>
+    <svg class="rung" viewBox="0 0 500 110" aria-hidden="true">
+      <path class="wire" d="M14 55H486"/>
+      <path class="live" d="M14 55H486"/>
+      <path class="rail" d="M14 20V90"/>
+      <path class="rail end" d="M486 20V90"/>
+      <g class="c0" transform="translate(104 39)">
+        <rect x="-4" y="0" width="42" height="32" fill="#16181B"/>
+        <path class="halfL" d="M7.7 0H15V7H11L7.7 10.4V21.6L11 25H15V32H7.7L0 24.3V7.7Z"/>
+        <path class="halfR" d="M26.3 0H19V7H23L26.3 10.4V21.6L23 25H19V32H26.3L34 24.3V7.7Z"/>
+      </g>
+      <g class="c1" transform="translate(204 39)">
+        <rect x="-4" y="0" width="42" height="32" fill="#16181B"/>
+        <path class="halfL" d="M7.7 0H15V7H11L7.7 10.4V21.6L11 25H15V32H7.7L0 24.3V7.7Z"/>
+        <path class="halfR" d="M26.3 0H19V7H23L26.3 10.4V21.6L23 25H19V32H26.3L34 24.3V7.7Z"/>
+      </g>
+      <g class="c2" transform="translate(304 39)">
+        <rect x="-4" y="0" width="42" height="32" fill="#16181B"/>
+        <path class="halfL" d="M7.7 0H15V7H11L7.7 10.4V21.6L11 25H15V32H7.7L0 24.3V7.7Z"/>
+        <path class="halfR" d="M26.3 0H19V7H23L26.3 10.4V21.6L23 25H19V32H26.3L34 24.3V7.7Z"/>
+      </g>
+      <circle class="coil" cx="412" cy="55" r="16"/>
+      <text class="addr" x="121" y="28">X0</text><text x="121" y="88">Program</text>
+      <text class="addr" x="221" y="28">X1</text><text x="221" y="88">Compile</text>
+      <text class="addr" x="321" y="28">X2</text><text x="321" y="88">Download</text>
+      <text class="addr" x="412" y="28">Y0</text><text x="412" y="88">Run</text>
+    </svg>
+  </div>
+</div>
+<main>
+  <section class="card first">
+    <h1>ROLOC Studio</h1>
+    <p class="sub">Version <span id="version">1.0.1</span> for Windows 10 or 11, 64-bit</p>
+    <a class="btn" id="download" href="https://github.com/RobologAutomation/roloc-studio-releases/releases/download/v1.0.1/ROLOC-Studio-Setup-1.0.1.msi">Download the Setup (<span id="size">49 MB</span>)</a>
+  </section>
+  <section class="card">
+    <h2>How to install</h2>
+    <ol>
+      <li>Open the downloaded Setup and follow its steps.</li>
+      <li>If Windows shows a SmartScreen warning, click <b>More info</b>, then <b>Run anyway</b>. The Setup does not have a digital signature yet.</li>
+      <li>Approve the administrator prompt.</li>
+    </ol>
+    <p class="sub" style="margin-top:12px">Installing a newer Setup replaces the older version. Your projects are kept.</p>
+  </section>
+  <section class="card">
+    <h2>What is new</h2>
+    <p id="notes">White app icon, start screen, toolbar connection icon shows the real state, update check.</p>
+    <p class="sub">From this version on, Studio tells you when an update is ready. You can also use Help, Check for updates.</p>
+    <p style="margin-top:12px"><a href="https://github.com/RobologAutomation/roloc-studio-releases/releases">All versions</a></p>
+  </section>
+  <footer>ROLOC is made by <a href="https://www.robolog.co.in/">Robolog Automation</a>.</footer>
+</main>
+<script>
+// The newest release fills in the page; if GitHub does not answer, the version written above still works.
+fetch('https://api.github.com/repos/RobologAutomation/roloc-studio-releases/releases/latest')
+  .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(function (release) {
+    var setup = (release.assets || []).filter(function (a) { return /\.msi$/i.test(a.name); })[0];
+    if (!setup) return;
+    document.getElementById('version').textContent = release.tag_name.replace(/^v/, '');
+    document.getElementById('download').href = setup.browser_download_url;
+    document.getElementById('size').textContent = Math.round(setup.size / 1048576) + ' MB';
+    if (release.body) document.getElementById('notes').textContent = release.body;
+  })
+  .catch(function () {});
+</script>
+</body>
+</html>
